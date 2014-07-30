@@ -1,0 +1,30 @@
+﻿@using GoByMobilePortal.Web.Enums
+@model GoByMobilePortal.Web.Models.RestaurantDetails
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @*@RenderBody()*@
+    @Html.Partial("Details", Model)
+</div>
+<!-- Define own section  Here demostact how define section-->
+@*<table border="1" style="width:300px">
+    <tr>
+        <td>
+                @RenderSection("Row1Column1",required:false)
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+                @RenderSection("Row1Column2",required:false)
+        </td>
+    </tr>
+
+</table>*@
+<!-- Footer Level  1-->
+@Html.Action("FooterLevel1", "Home", new { footerType = FooterType.Details })
+
+<!-- Footer Level  2-->
+@Html.Action("FooterLevel2", "Home", new { footerType = FooterType.Details })

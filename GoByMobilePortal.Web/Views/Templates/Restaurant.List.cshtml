@@ -1,0 +1,15 @@
+﻿@using GoByMobilePortal.Web.Enums
+@model GoByMobilePortal.Web.Models.RestaurantList
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @Html.Partial("List",Model)
+</div>
+
+<!-- Footer Level  1-->
+@Html.Action("FooterLevel1","Home",new {footerType=FooterType.List})
+
+<!-- Footer Level  2-->
+@Html.Action("FooterLevel2","Home",new {footerType=FooterType.List})

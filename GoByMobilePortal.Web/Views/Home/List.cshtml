@@ -1,0 +1,12 @@
+﻿@*@{
+    Layout = "~/Views/Templates/Restaurant.List.cshtml";
+}*@
+
+@model GoByMobilePortal.Web.Models.RestaurantList
+
+
+@foreach (var s in Model.RestaurantDetailses)
+{
+    <div>@s.Name </div>
+    <br/>
+}
